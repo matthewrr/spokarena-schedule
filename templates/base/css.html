@@ -1,0 +1,158 @@
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<style>
+    /*Website-Wide*/
+    @font-face {
+        font-family: 'Helvetica Underlay';
+        src: url('/media/Helvetica-Neue-Bold.ttf') format("truetype"),
+        local('Helvetica Underlay');
+    }
+    @font-face {
+        font-family: 'Helvetica Outline';
+        src: url('/media/Helvetica-Neue-Bold-Outline.ttf') format("truetype"),
+        local('Helvetica Outline');
+    }
+    body {
+        background: url('/media/background.jpg') no-repeat top center fixed;
+        background-size:100%;
+        background-color:black;
+    }
+    a:hover {text-decoration: none;}
+    input[type='text'], input[type='number'],
+    textarea {
+      font-size: 16px;
+    }
+    strong {font-weight:600;}
+    
+    /*Homepage*/
+    .logo {
+      content:url(/media/logo.png);
+      width: 300px;
+    }
+    
+    /*Form*/
+    .form-position {
+        position: absolute;
+        top: 115px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width:80%;
+        max-width:350px;
+    }
+    .btn-dark {background-color: #000;}
+    input:focus {
+        border-color: #000!important;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0)!important;
+    }
+    .input-group {
+        position: absolute;
+        margin-top: -17px;
+    }
+    .author {
+        position: absolute;
+        bottom: 20%;
+        content:url(/media/author-logo.png) no-repeat;
+        width:45%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width:350px;
+    }
+    .gradient-overlay {
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+        width:100%;
+        height:100px;
+        bottom:0px;
+    }
+    
+    /*Results Page*/
+    .name {
+        color:rgba(71,53,62,1);
+        font-size:3em;
+        font-family:'Helvetica Underlay';
+        text-transform:uppercase;
+        letter-spacing:1px;
+        transform: scale(.94,1);
+    }
+    .underlay {
+        color: rgba(71,53,62,1);
+        font-size: 3em;
+        font-family: 'Helvetica Underlay';
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: absolute;
+        top:-2px; left: -4px; bottom: 0; right: 0;
+        transform: scale(.94,1);
+    }
+    .underlay > a {
+        -moz-text-fill-color: rgba(71,53,62,0);
+        -webkit-text-fill-color: rgba(71,53,62,0);
+        -moz-text-stroke-color: #000;
+        -webkit-text-stroke-color: #000;
+        -moz-text-stroke-width: 1px;  
+        -webkit-text-stroke-width: 1px;
+    }
+    .card {
+        width: 90%; 
+        background-color: rgba(71,53,62,0.8);
+        color:white;
+        font-size:1em;
+        max-width:350px;
+    }
+    .card-header {
+        background-color: rgba(71,53,62,0.7);
+        padding: .25rem 1.25rem;
+    }
+    .card-header > a  {
+        color: #FFF;
+        text-transform: uppercase;
+        font-family: "open sans";
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    li {
+        color:white;
+        list-style-type: none;
+        border-bottom: 1px solid #87767e;
+        line-height:1.2em;
+        padding-top:1em;
+        padding-bottom:1em;
+    }
+    li:last-child { border-bottom: none!important; }
+    .date-div {
+        border-radius: 10px;
+        margin-right: 8px;
+        background-color: rgba(71,53,62,0.7);
+        width: 54px;
+        height: 55px;
+    }
+    .month {
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: #e0c9bd;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+        color: rgba(71,53,62,1);
+        font-family: "roboto";
+        padding-top: 2px;
+        font-size: .9em;
+    }
+    .day {
+        font-size: 1.7em;
+        font-weight: 600;
+        line-height: .75em;
+        padding-top: 8px;
+    }
+    .event-details {
+        font-family: "open sans";
+        font-size: .90em;
+        margin-top: 1px;
+    }
+    .not-scheduled {
+        font-size:18px;
+        line-height:1.2em
+    }
+</style>

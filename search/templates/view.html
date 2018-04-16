@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  
+  {% if not valid_id %}
+    <div class='logo mt-5 mx-auto' alt='Spokarena Logo'></div>
+    {% include "search/form.html" %}
+    <div class="gradient-overlay"></div>
+    <div class="author"></div>
+    <div class="author-logo" alt='Author Logo'></div>
+  {% else %}
+    <div class="text-center" style="height:70px">
+      <div class="name"><a>{{name}}<a/></div>
+      <div class="underlay"><a>{{name}}<a/></div>
+    </div>
+    {% include "search/card.html" with card_header="Scheduled Events" %}
+    {% include "search/card.html" with card_header="All Events" %}
+  {% endif %}
+
+{% endblock %}

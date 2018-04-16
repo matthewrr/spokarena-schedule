@@ -1,0 +1,18 @@
+<div class="card mx-auto mb-3">
+  <div class="card-header text-center"><a>{{card_header}}</a></div>
+  <div class="card-body py-0">
+    <ul class="list-group list-group-flush text-left">
+      {% if card_header == "Scheduled Events" %}
+        {% for event in events %}
+          {% if event.4 %}
+            {% include "search/event-list.html" %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for event in events %}
+          {% include "search/event-list.html" %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</div>

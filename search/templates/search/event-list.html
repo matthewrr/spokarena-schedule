@@ -1,0 +1,21 @@
+{% with month=event.0 day=event.1 title=event.2 doors=event.3 arrive=event.4 %}
+    
+    <li class="mx-2" id='{{month}}{{day}}'>
+      <div class="row">
+         <div class="date-div text-center ml-4">
+          <div class="month">{{month}}</div>
+          <div class="day">{{day}}</div>  
+        </div>
+        <div class="event-details col-8 px-2" style="line-height:1.2em;">
+          <strong>Event: </strong>{{title}}<br />
+          <strong>Doors Open: </strong>{{doors|default:"TBD"}}<br />
+          {% if arrive %}
+            <strong>Arrive By: </strong>{{arrive}}
+          {% else %}
+            Not Currently Scheduled
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  
+{% endwith %}
