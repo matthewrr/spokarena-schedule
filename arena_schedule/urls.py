@@ -7,6 +7,7 @@ from search import views
 
 urlpatterns = [
     url(r'^$', views.index, name='home'),
+    url(r'^sms/', include('sms.urls')),
     path('admin/', admin.site.urls),
     path('search/', include('search.urls')),
 ]

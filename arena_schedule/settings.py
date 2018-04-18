@@ -11,7 +11,7 @@ SECRET_KEY = '(ae8!)o0hibc6z4(((0$_=lsi3ppe+90#r)cu=)17_l1($2lmu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['.elasticbeanstalk.com', '.amazonaws.com', '.spokarena.com']
+ALLOWED_HOSTS = ['.elasticbeanstalk.com', '.amazonaws.com', '.spokarena.com', '.ngrok.io']
 
 # Application Definition
 INSTALLED_APPS = [
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'search',
+    'sms',
 ]
 
 MIDDLEWARE = [
