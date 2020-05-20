@@ -31,7 +31,7 @@ google-auth-httplib2==0.0.3
 google-auth-oauthlib==0.2.0
 gyp==0.1
 hibagent==1.0.0
-httplib2==0.11.3
+httplib2==0.18.0
 idna==2.6
 ikpdb==1.2.3
 Inflector==2.0.12
