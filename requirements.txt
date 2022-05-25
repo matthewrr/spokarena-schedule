@@ -61,7 +61,7 @@ pycparser==2.18
 pycrypto==2.6.1
 pycurl==7.19.0
 pygpgme==0.3
-PyJWT==1.6.1
+PyJWT==2.4.0
 pyliblzma==0.5.3
 pylint==1.8.3
 pylint-django==0.8.0
